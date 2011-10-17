@@ -2,7 +2,7 @@
 /**
  * ExtraName
  *
- * Copyright 2011 by Mark Hamstra <business@markhamstra.nl>
+ * Copyright 2011 by Mark Hamstra <hello@markhamstra.com>
  *
  * This file is part of ExtraName, a real estate property listings component
  * for MODX Revolution.
@@ -24,7 +24,16 @@
 
 class ExtraName {
     public $modx;
-    public $config = array();extraname
+    public $config = array();
+    private $chunks = array();
+
+    /**
+     * Main ExtraName constructor for setting up configuration etc.
+     *
+     * @param \modX $modx
+     * @param array $config
+     * @return \ExtraName
+     */
     function __construct(modX &$modx,array $config = array()) {
         $this->modx =& $modx;
  
@@ -43,18 +52,20 @@ class ExtraName {
             'assets_url' => $assetsUrl,
             'connector_url' => $assetsUrl.'connector.php',
         ),$config);
+
+        $this->modx->addPackage('extraname',$this->config['model_path']);
+        $this->modx->lexicon->load('extraname:default');
     }
 
     /**
+     * Optional context specific initialization.
+     *
      * @param string $ctx Context name
      * @return bool
      */
     public function initialize($ctx = 'web') {
         switch ($ctx) {
             case 'mgr':
-                $modelpath = $this->config['model_path'];
-                $this->modx->addPackage('extraname',$modelpath);
-                $this->modx->lexicon->load('extraname:default');
             break;
         }
         return true;
@@ -103,6 +114,7 @@ class ExtraName {
         $f = $this->config['elements_path'].'chunks/'.strtolower($name).$postFix;
         if (file_exists($f)) {
             $o = file_get_contents($f);
+            /* @var modChunk $chunk */
             $chunk = $this->modx->newObject('modChunk');
             $chunk->set('name',$name);
             $chunk->setContent($o);

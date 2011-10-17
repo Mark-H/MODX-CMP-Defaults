@@ -2,7 +2,7 @@
 /**
  * ExtraName
  *
- * Copyright 2011 by Mark Hamstra <business@markhamstra.nl>
+ * Copyright 2011 by Mark Hamstra <hello@markhamstra.com>
  *
  * This file is part of ExtraName.
  *
@@ -49,7 +49,7 @@ $generator->classTemplate= <<<EOD
 /**
  * ExtraName
  *
- * Copyright 2011 by Mark Hamstra <business@markhamstra.nl>
+ * Copyright 2011 by Mark Hamstra <hello@markhamstra.com>
  *
  * This file is part of ExtraName, a real estate property listings component
  * for MODX Revolution.
@@ -76,7 +76,7 @@ EOD;
 /**
  * ExtraName
  *
- * Copyright 2011 by Mark Hamstra <business@markhamstra.nl>
+ * Copyright 2011 by Mark Hamstra <hello@markhamstra.com>
  *
  * This file is part of ExtraName, a real estate property listings component
  * for MODX Revolution.
@@ -104,7 +104,7 @@ EOD;
 /**
  * ExtraName
  *
- * Copyright 2011 by Mark Hamstra <business@markhamstra.nl>
+ * Copyright 2011 by Mark Hamstra <hello@markhamstra.com>
  *
  * This file is part of ExtraName, a real estate property listings component
  * for MODX Revolution.

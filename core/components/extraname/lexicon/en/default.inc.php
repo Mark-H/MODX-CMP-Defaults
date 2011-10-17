@@ -1,6 +1,6 @@
 <?php
 
-$_lang['realestatex'] = 'RealEstateX';
-$_lang['realestatex.desc'] = 'Manage your real estate empire.';
+$_lang['extraname'] = 'ExtraName';
+$_lang['extraname.desc'] = 'ExtraName is a wicked addon that will do something for you, real easy!';
 
 ?>
