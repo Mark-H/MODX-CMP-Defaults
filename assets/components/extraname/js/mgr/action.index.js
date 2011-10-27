@@ -10,7 +10,7 @@ Index page configuration.
 ExtraName.page.Index = function(config) {
     config = config || {};
     Ext.applyIf(config,{
-        renderTo: 'realestatex',
+        renderTo: 'extraname',
         components: [{
             xtype: 'extraname-panel-header'
         },{
