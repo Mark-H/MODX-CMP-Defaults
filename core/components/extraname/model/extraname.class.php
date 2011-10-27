@@ -84,9 +84,9 @@ class ExtraName {
     public function getChunk($name,$properties = array()) {
         $chunk = null;
         if (!isset($this->chunks[$name])) {
-            $chunk = $this->_getTplChunk($name);
+            $chunk = $this->modx->getObject('modChunk',array('name' => $name),true);
             if (empty($chunk)) {
-                $chunk = $this->modx->getObject('modChunk',array('name' => $name),true);
+                $chunk = $this->_getTplChunk($name);
                 if ($chunk == false) return false;
             }
             $this->chunks[$name] = $chunk->getContent();
